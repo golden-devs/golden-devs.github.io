@@ -21,7 +21,15 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/,
-        use: ['file-loader', 'image-webpack-loader'],
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true,
+            },
+          },
+        ],
       },
       {
         test: /\.html$/,
