@@ -1,3 +1,4 @@
+import './scripts/bottom-panel';
 import './scss/style.scss';
 
 $(document).ready(function() {
