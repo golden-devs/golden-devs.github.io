@@ -4,8 +4,8 @@
   "description": "Golden Devs website",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack",
-    "start": "webpack-dev-server --host 0.0.0.0 -w",
+    "webpack": "webpack --config webpack.dev.js",
+    "start": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0 -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
   }
 }
