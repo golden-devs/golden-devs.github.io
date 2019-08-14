@@ -1,4 +1,3 @@
-import './scripts/bottom-panel';
 import './scss/style.scss';
 
 $(document).ready(function() {
@@ -12,4 +11,4 @@ $(document).ready(function() {
     }
   });
 });
-new WOW().init();
+new WOW({ mobile: false }).init();
