@@ -10,7 +10,7 @@
     .head2{
         font-size: 3rem;
     }
-    #landing{
+    .landing{
         height: 450px;
         .caption{
             h1{
@@ -39,7 +39,7 @@
             width: 100px;
         }
     }
-    #about{
+    .about{
         margin-top: 150px;
         .main{
             display: none;
@@ -56,7 +56,7 @@
         }
     }
 
-    #services{
+    .services{
         background-image: url('../images/circuit.png');
         background-position: center;
         background-size: cover;
@@ -88,7 +88,7 @@
     .head2{
         font-size: 2.5rem;
     }
-    #landing{
+    .landing{
             height: 450px;
         .big-hex{
             bottom: -150px;
@@ -117,7 +117,7 @@
             }
         }
     }
-    #about{
+    .about{
         margin-top: 100px;
         .main{
             display: block;
@@ -133,7 +133,7 @@
             font-size: 1rem;
         }
     }
-    #services{
+    .services{
         .list{
             h1{
                 font-size: 1.5rem;
@@ -147,7 +147,7 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    #landing{
+    .landing{
         height: 650px;
         .med-hex-alone{
             top: 100px;
@@ -181,7 +181,7 @@
             }
         }
     }
-    #about{
+    .about{
         margin-top: 100px;
         .main{
             display: block;

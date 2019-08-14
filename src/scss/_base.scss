@@ -120,7 +120,7 @@ nav{
     padding: 7px 25px;
 }
 
-#landing{
+.landing{
     background-image: url('../images/landing3.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,7 +166,7 @@ nav{
     }
 }
 
-#about{
+.about{
     position: relative;
     padding: 25px;
     .main{
@@ -190,7 +190,7 @@ nav{
     }
 }
 
-#services{
+.services{
     background-image: url('../images/circuit.png');
     background-position: center;
     background-size: cover;
@@ -235,7 +235,7 @@ nav{
     }
 }
 
-#contact{
+.contact{
     margin-top: 100px;
     position: relative;
     form{
