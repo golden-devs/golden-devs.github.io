@@ -89,18 +89,33 @@ body{
     }
 }
 
-.head1{
-    color: $lblue;
-    font-weight: 600;
+/** STYLIZED HEADINGS
+ *  Really consists of two parts and is used as such:
+ *
+ *  <h2 class="head1">...</h2>
+ *  <h1 class="head2">...</h1>
+ *
+ *  I know it's not proper markup. It should really be just a single `<h#>`
+ *  element and probably some `<span>`s. I'll improve the HTML in a later
+ *  update.
+ */
+
+.head1,
+.head2 {
+    line-height: 1;
     margin: 0;
-    line-height: 0.5;
-    font-size: 2.25rem;
 }
-.head2{
+
+.head1 {
+    color: $lblue;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.head2 {
     color: $blue;
-    font-weight: 900;
-    margin: 0;
     font-size: 2rem;
+    font-weight: 900;
 }
 
 .btn{
