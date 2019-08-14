@@ -36,7 +36,7 @@
                 </div>
             </div>
         </nav>
-        <section id="landing">
+        <section class="landing" id="landing">
             <img src="images/med-blue.png" class="med-hex-alone wow animated fadeInUp" alt="">
             <img src="images/big-blue-cut.png" class="big-hex wow animated fadeInRight" alt="">
             <img src="images/med-blue.png" class="med-hex wow animated fadeInUp" alt="">
@@ -45,14 +45,12 @@
                 <h1>Ideas start from nothing to everything.</h1>
             </div>
         </section>
-        <section id="about">
-            <!-- <img src="images/cont.png" class="cont" alt=""> -->
-            <!-- <img src="images/extra.png" class="main" alt=""> -->
+        <section class="about" id="about">
             <img src="images/med-blue-cut.png" class="med-hex-alone wow animated fadeInUp" alt="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-lg-5 p-0">
-                        <img src="images/logo.png" class="main wow animated pulse delay-2s" alt="">
+                        <img src="images/logo.png" class="about__logo wow animated pulse delay-2s" alt="">
                     </div>
                     <div class="col-md-12 col-lg-7 my-auto">
                         <div class="caption mx-auto">
@@ -78,7 +76,7 @@
                 </div>
             </div>
         </section>
-        <section id="services">
+        <section class="services" id="services">
             <div class="container">
                 <h2 class="head1 text-center">OUR</h2>
                 <h1 class="head2 text-center">SERVICES</h1>
@@ -96,11 +94,11 @@
                         </div>
                         <div class="col-md-12 col-lg-4 col-xl-4 item wow animated fadeInUp">
                             <div class="row">
-                                <div class="col-md-8 col-lg-12">
-                                    <h1>Graphics</h1>
-                                </div>
-                                <div class="col-md-4 col-lg-12 order-lg-first">
+                                <div class="col-md-4 col-lg-12">
                                     <img src="images/graphics.jpg" alt="">
+                                </div>
+                                <div class="col-md-8 col-lg-12 order-md-first order-lg-last">
+                                    <h1>Graphics</h1>
                                 </div>
                             </div>
                         </div>
@@ -116,11 +114,11 @@
                         </div>
                         <div class="col-md-12 col-lg-4 col-xl-4 item wow animated fadeInUp">
                             <div class="row">
-                                <div class="col-md-8 col-lg-12">
-                                    <h1>Internet of Things</h1>
-                                </div>
-                                <div class="col-md-4 col-lg-12 order-lg-first">
+                                <div class="col-md-4 col-lg-12">
                                     <img src="images/iot.jpg" alt="">
+                                </div>
+                                <div class="col-md-8 col-lg-12 order-md-first order-lg-last">
+                                    <h1>Internet of Things</h1>
                                 </div>
                             </div>
                         </div>
@@ -136,11 +134,11 @@
                         </div>
                         <div class="col-md-12 col-lg-4 col-xl-4 item wow animated fadeInUp">
                             <div class="row">
-                                <div class="col-md-8 col-lg-12">
-                                    <h1>Mobile Development</h1>
-                                </div>
-                                <div class="col-md-4 col-lg-12 order-lg-first">
+                                <div class="col-md-4 col-lg-12">
                                     <img src="images/mobile.jpg" alt="">
+                                </div>
+                                <div class="col-md-8 col-lg-12 order-md-first order-lg-last">
+                                    <h1>Mobile Development</h1>
                                 </div>
                             </div>
                         </div>
@@ -148,16 +146,20 @@
                 </div>
             </div>
         </section>
-        <div id="contactUs"></div>
-        <section id="contact">
+        <div class="contactUs" id="contactUs"></div>
+        <section class="contact" id="contact">
             <div class="container">
                 <img src="images/big-blue.png" class="big-hex wow animated fadeInLeft" alt="">
                 <img src="images/med-blue-cut2.png" class="med-hex wow animated fadeInUp" alt="">
                 <img src="images/small-blue-cut.png" class="small-hex wow animated fadeInRight" alt="">
-                <h2 class="head1 text-center">GET A QUOTE</h2>
-                <h1 class="head2 text-center">MESSAGE US</h1>
+
+                <div class="contact__title">
+                    <h2 class="head1 text-center">GET A QUOTE</h2>
+                    <h1 class="head2 text-center">MESSAGE US</h1>
+                </div>
+
                 <div class="row">
-                    <div class="col-6 offset-3">
+                    <div class="col-md-6 ml-auto mr-auto">
                         <form class="" action="mailto:caluyaalyssamae@gmail.com" action="index.html" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Full Name">

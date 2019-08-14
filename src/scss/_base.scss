@@ -52,62 +52,70 @@ body{
     overflow-x: hidden;
 }
 
+/** NAVIGATION */
 
-.navbar-brand{
-    font-size: 2.25rem;
-    font-weight: 400;
-    margin: 0;
-    img{
-        width: 40px;
-    }
-    .black{
-        font-weight: 900;
-    }
-}
+// This is more aligned with Bootstrap's way of coloring nav links.
 
-nav{
+.navbar-light {
     background: #fff;
-    padding: 0;
-    .navbar-nav{
-        .nav-item{
+
+    .navbar-nav {
+        .nav-link {
+            color: $blue;
+            font-size: 1.2rem;
+            padding: 1.3rem;
             text-align: center;
-            &.active{
-                .nav-link{
-                    color: $lblue;
-                }
-                &:hover{
-                    .nav-link{
-                        color: $lblue;
-                    }
-                }
-            }
-            &:hover{
-                .nav-link{
-                    color: $yellow;
-                }
-            }
-            .nav-link{
-                font-size: 1.2rem;
-                text-transform: uppercase;
-                padding: 1.3rem;
-                color: $blue;
+            text-transform: uppercase;
+        }
+        .nav-link:hover {
+            color: $yellow;
+        }
+
+        // I don't think these styles are used anywhere.
+        .active {
+            & > .nav-link,
+            & > .nav-link:hover {
+                color: $lblue;
             }
         }
     }
 }
 
-.head1{
-    color: $lblue;
-    font-weight: 600;
-    margin: 0;
-    line-height: 0.5;
+.navbar-brand {
     font-size: 2.25rem;
-}
-.head2{
-    color: $blue;
-    font-weight: 900;
     margin: 0;
+    img {
+        width: 40px;
+    }
+}
+
+/** STYLIZED HEADINGS
+ *  Really consists of two parts and is used as such:
+ *
+ *  <h2 class="head1">...</h2>
+ *  <h1 class="head2">...</h1>
+ *
+ *  I know it's not proper markup. It should really be just a single `<h#>`
+ *  element and probably some `<span>`s. I'll improve the HTML in a later
+ *  update.
+ */
+
+.head1,
+.head2 {
+    line-height: 1;
+    margin: 0;
+}
+
+.head1 {
+    color: $lblue;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.head2 {
+    color: $blue;
     font-size: 2rem;
+    font-weight: 900;
 }
 
 .btn{
@@ -120,7 +128,7 @@ nav{
     padding: 7px 25px;
 }
 
-#landing{
+.landing{
     background-image: url('../images/landing3.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,31 +174,45 @@ nav{
     }
 }
 
-#about{
+/** ABOUT SECTION
+ *
+ *  1. Generous margin so the logo doesn't mix with the previous section's
+ *     polygons.
+ */
+
+.about{
+    margin-top: 100px; /* 1 */
     position: relative;
-    padding: 25px;
-    .main{
-        width: 100%;
-        // transform: rotate(-30deg);
-        // position: absolute;
-        // top: 0;
-        // left: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    // BEM-style class name. The original class name (.main) doesn't make sense.
+
+    #{&}__logo {
+        display: block;
+        margin: auto;
+        width: 75%;
     }
-    .cont{
-        width: 200px;
-    }
+
+    /**
+     * 1. Semi-transparent background so that one polygon doesn't hurt the
+     *    text's legibility.
+     */
+
     .caption{
-        padding: 3.75rem;
+        background: rgba(255, 255, 255, 0.75); /* 1 */
+        padding: 1.5rem;
     }
+
     .med-hex-alone{
-        position: absolute;
         bottom: -70px;
+        position: absolute;
         right: 0;
-        width: 230px;
+        width: 200px;
     }
 }
 
-#services{
+.services{
     background-image: url('../images/circuit.png');
     background-position: center;
     background-size: cover;
@@ -235,19 +257,34 @@ nav{
     }
 }
 
-#contact{
+.contact{
     margin-top: 100px;
     position: relative;
+
+    /**
+     * Contains the stylized headings for this section. I placed them in this
+     * div so the text doesn't go underneath the floating polygons.
+     */
+
+    #{&}__title {
+        position: relative;
+    }
+
     form{
         margin-top: 25px;
         textarea{
             resize: none;
         }
     }
+
+    /**
+     * 1. Double the original value so it doesn't go underneath the title (which
+     *    has the same color!). This is reverted in the media queries.
+     */
     .big-hex{
         position: absolute;
         top: -100px;
-        left: -100px;
+        left: -200px; /* 1 */
         width: 300px;
         transform: rotate(102deg);
     }
