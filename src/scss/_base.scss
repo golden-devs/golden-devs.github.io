@@ -260,16 +260,31 @@ body{
 .contact{
     margin-top: 100px;
     position: relative;
+
+    /**
+     * Contains the stylized headings for this section. I placed them in this
+     * div so the text doesn't go underneath the floating polygons.
+     */
+
+    #{&}__title {
+        position: relative;
+    }
+
     form{
         margin-top: 25px;
         textarea{
             resize: none;
         }
     }
+
+    /**
+     * 1. Double the original value so it doesn't go underneath the title (which
+     *    has the same color!). This is reverted in the media queries.
+     */
     .big-hex{
         position: absolute;
         top: -100px;
-        left: -100px;
+        left: -200px; /* 1 */
         width: 300px;
         transform: rotate(102deg);
     }
