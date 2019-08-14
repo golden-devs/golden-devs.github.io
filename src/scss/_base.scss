@@ -174,27 +174,41 @@ body{
     }
 }
 
+/** ABOUT SECTION
+ *
+ *  1. Generous margin so the logo doesn't mix with the previous section's
+ *     polygons.
+ */
+
 .about{
+    margin-top: 100px; /* 1 */
     position: relative;
-    padding: 25px;
-    .main{
-        width: 100%;
-        // transform: rotate(-30deg);
-        // position: absolute;
-        // top: 0;
-        // left: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    // BEM-style class name. The original class name (.main) doesn't make sense.
+
+    #{&}__logo {
+        display: block;
+        margin: auto;
+        width: 75%;
     }
-    .cont{
-        width: 200px;
-    }
+
+    /**
+     * 1. Semi-transparent background so that one polygon doesn't hurt the
+     *    text's legibility.
+     */
+
     .caption{
-        padding: 3.75rem;
+        background: rgba(255, 255, 255, 0.75); /* 1 */
+        padding: 1.5rem;
     }
+
     .med-hex-alone{
-        position: absolute;
         bottom: -70px;
+        position: absolute;
         right: 0;
-        width: 230px;
+        width: 200px;
     }
 }
 

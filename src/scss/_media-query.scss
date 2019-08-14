@@ -41,17 +41,20 @@
     }
     .about{
         margin-top: 150px;
-        .main{
-            display: none;
+
+        // I have no idea why the logo was invisible here, yet visible on
+        // mobile. I added it back.
+
+        #{&}__logo {
+            width: 50%;
         }
+        
         .med-hex-alone{
-            position: absolute;
-            bottom: -180px;
-            right: 0;
-            width: 200px;
+            bottom: -250px;
         }
+
         .caption{
-            padding: 0 0 0 2rem;
+            padding: 0;
             font-size: 1.5rem;
         }
     }
@@ -117,17 +120,18 @@
             }
         }
     }
+
     .about{
         margin-top: 100px;
-        .main{
-            display: block;
+
+        #{&}__logo {
+            width: 100%;
         }
+
         .med-hex-alone{
-            position: absolute;
             bottom: -100px;
-            right: 0;
-            width: 200px;
         }
+
         .caption{
             padding: 3.75rem;
             font-size: 1rem;
@@ -179,22 +183,6 @@
             p{
                 font-size: 1rem;
             }
-        }
-    }
-    .about{
-        margin-top: 100px;
-        .main{
-            display: block;
-        }
-        .med-hex-alone{
-            position: absolute;
-            bottom: -100px;
-            right: 0;
-            width: 200px;
-        }
-        .caption{
-            padding: 3.75rem;
-            font-size: 1rem;
         }
     }
 }
