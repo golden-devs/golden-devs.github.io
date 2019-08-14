@@ -52,47 +52,40 @@ body{
     overflow-x: hidden;
 }
 
+/** NAVIGATION */
 
-.navbar-brand{
-    font-size: 2.25rem;
-    font-weight: 400;
-    margin: 0;
-    img{
-        width: 40px;
-    }
-    .black{
-        font-weight: 900;
+// This is more aligned with Bootstrap's way of coloring nav links.
+
+.navbar-light {
+    background: #fff;
+
+    .navbar-nav {
+        .nav-link {
+            color: $blue;
+            font-size: 1.2rem;
+            padding: 1.3rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .nav-link:hover {
+            color: $yellow;
+        }
+
+        // I don't think these styles are used anywhere.
+        .active {
+            & > .nav-link,
+            & > .nav-link:hover {
+                color: $lblue;
+            }
+        }
     }
 }
 
-nav{
-    background: #fff;
-    padding: 0;
-    .navbar-nav{
-        .nav-item{
-            text-align: center;
-            &.active{
-                .nav-link{
-                    color: $lblue;
-                }
-                &:hover{
-                    .nav-link{
-                        color: $lblue;
-                    }
-                }
-            }
-            &:hover{
-                .nav-link{
-                    color: $yellow;
-                }
-            }
-            .nav-link{
-                font-size: 1.2rem;
-                text-transform: uppercase;
-                padding: 1.3rem;
-                color: $blue;
-            }
-        }
+.navbar-brand {
+    font-size: 2.25rem;
+    margin: 0;
+    img {
+        width: 40px;
     }
 }
 
