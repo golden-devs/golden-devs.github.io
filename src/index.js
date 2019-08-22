@@ -5,16 +5,25 @@ $(document).ready(function() {
   $('.only-numeric').bind('keypress', function(e) {
     var keyCode = e.which ? e.which : e.keyCode;
     if (!(keyCode >= 48 && keyCode <= 57)) {
-      $('.error').css('display', 'inline');
+      $('#phone-help').css('display', 'inline');
       return false;
     } else {
-      $('.error').css('display', 'none');
+      $('#phone-help').css('display', 'none');
     }
   });
 
   $('#js-contact-form').on('submit', function(e) {
     e.preventDefault();
     const { name, email, phone, message, submit } = e.target;
+
+    $('#name-help').text('');
+    $('#name-help').css('display', 'none');
+    $('#email-help').text('');
+    $('#email-help').css('display', 'none');
+    $('#phone-help').text('');
+    $('#phone-help').css('display', 'none');
+    $('#message-help').text('');
+    $('#message-help').css('display', 'none');
 
     submit.setAttribute('disabled', '');
     submit.setAttribute('aria-disabled', 'true');
@@ -29,7 +38,14 @@ $(document).ready(function() {
         console.log(response);
       })
       .catch(function(error) {
-        console.error(error.response.data.errors);
+        const { errors } = error.response.data;
+        console.error(errors);
+
+        errors.forEach(function({ msg, param }) {
+          const elem = $(`#${param}-help`);
+          elem.text(msg);
+          elem.css('display', 'unset');
+        });
       })
       .then(function() {
         setTimeout(function() {

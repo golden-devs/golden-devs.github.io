@@ -162,17 +162,20 @@
                     <div class="col-md-6 ml-auto mr-auto">
                         <form class="" id="js-contact-form" method="post">
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Full Name" maxlength="50" required>
+                                <input type="text" name="name" class="form-control" placeholder="Full Name" aria-describedby="name-help" maxlength="50" required>
+                                <p class="form-text orange" id="name-help"></p>
                             </div>
                             <div class="form-group">
                                 <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                <p class="form-text orange" id="email-help"></p>
                             </div>
                             <div class="form-group">
                                 <input type="tel" name="phone" class="form-control only-numeric" placeholder="Contact Number" maxlength="20">
-                                <span class="error orange" style="display: none">*Please enter a valid contact number</span>
+                                <p class="form-text orange" id="phone-help" style="display: none">*Please enter a valid contact number</p>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" name="message" rows="5" placeholder="Message" minlength="10" maxlength="5000" required></textarea>
+                                <p class="form-text orange" id="message-help"></p>
                             </div>
                             <button type="submit" id="submit" class="btn btn-primary animated pulse delay-1s" name="button">SEND<i class="fa fa-paper-plane ml-2"></i></button>
                         </form>
