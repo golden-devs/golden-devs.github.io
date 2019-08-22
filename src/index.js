@@ -14,8 +14,11 @@ $(document).ready(function() {
 
   $('#js-contact-form').on('submit', function(e) {
     e.preventDefault();
+    const { name, email, phone, message, submit } = e.target;
 
-    const { name, email, phone, message } = e.target;
+    submit.setAttribute('disabled', '');
+    submit.setAttribute('aria-disabled', 'true');
+
     axios.post('https://golden-devs-contact.glitch.me/contact', {
       name: name.value,
       email: email.value,
@@ -27,6 +30,12 @@ $(document).ready(function() {
       })
       .catch(function(error) {
         console.error(error.response.data.errors);
+      })
+      .then(function() {
+        setTimeout(function() {
+          submit.removeAttribute('disabled');
+          submit.removeAttribute('aria-disabled');
+        }, 3000);
       });
   });
 });
