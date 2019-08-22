@@ -2,7 +2,7 @@
 
 Golden Devs website
 
-1.1.0
+1.2.0
 
 ## Prerequisites
 
@@ -16,6 +16,10 @@ Golden Devs website
    the output on `localhost:8080`.
 
 ## Changelog
+
+### 1.2.0
+
+- Implement contact form.
 
 ### 1.1.0
 
