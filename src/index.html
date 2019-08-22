@@ -162,18 +162,22 @@
                     <div class="col-md-6 ml-auto mr-auto">
                         <form class="" id="js-contact-form" method="post">
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Full Name" aria-describedby="name-help" maxlength="50" required>
+                                <label class="sr-only" for="name">Full Name</label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Full Name" aria-describedby="name-help" maxlength="50" required>
                                 <p class="form-text orange" id="name-help"></p>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                <label class="sr-only" for="email">Email</label>
+                                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
                                 <p class="form-text orange" id="email-help"></p>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="phone" class="form-control only-numeric" placeholder="Contact Number" maxlength="20">
+                                <label class="sr-only" for="phone">Contact Number</label>
+                                <input type="tel" name="phone" class="form-control only-numeric" id="phone" placeholder="Contact Number" maxlength="20">
                                 <p class="form-text orange" id="phone-help"></p>
                             </div>
                             <div class="form-group">
+                                <label class="sr-only" for="message">Message</label>
                                 <textarea class="form-control" name="message" rows="5" placeholder="Message" minlength="10" maxlength="5000" required></textarea>
                                 <p class="form-text orange" id="message-help"></p>
                             </div>
