@@ -17,6 +17,10 @@ Golden Devs website
 
 ## Changelog
 
+### 1.2.0
+
+- Implement contact form.
+
 ### 1.1.0
 
 - Fixed styles.
