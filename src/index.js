@@ -25,7 +25,8 @@ $(document).ready(function() {
       message: message.value
     })
       .then(function(response) {
-        console.log(response);
+        $('#form-alert').css('display', 'block');
+        $('#form-alert').focus();
       })
       .catch(function(error) {
         const { errors } = error.response.data;
@@ -39,6 +40,7 @@ $(document).ready(function() {
       })
       .then(function() {
         setTimeout(function() {
+          $('#form-alert').css('display', 'none');
           submit.removeAttribute('disabled');
           submit.removeAttribute('aria-disabled');
         }, 3000);
