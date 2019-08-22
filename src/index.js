@@ -2,16 +2,6 @@ import axios from 'axios';
 import './scss/style.scss';
 
 $(document).ready(function() {
-  $('.only-numeric').bind('keypress', function(e) {
-    var keyCode = e.which ? e.which : e.keyCode;
-    if (!(keyCode >= 48 && keyCode <= 57)) {
-      $('#phone-help').css('display', 'inline');
-      return false;
-    } else {
-      $('#phone-help').css('display', 'none');
-    }
-  });
-
   $('#js-contact-form').on('submit', function(e) {
     e.preventDefault();
     const { name, email, phone, message, submit } = e.target;
