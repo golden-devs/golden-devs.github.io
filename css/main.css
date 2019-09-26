@@ -1,0 +1,28 @@
+/**
+ * Responsive embedded iframe map. The iframe is assumed to be 600x450 (but any
+ * dimension should be fine as long as the aspect ratio is 4:3).
+ *
+ * <div class="map">
+ *   <iframe class="map__iframe" src="..." width="600" height="450" ...></iframe>
+ * </div>
+ *
+ * 1. Necessary amount of padding for a 4:3 iframe (3/4 == 0.75)
+ * 2. The map is embedded in a Bootstrap-controlled flex div. Explicit width is
+ *    required.
+ */
+
+.map {
+  overflow: hidden;
+  padding-top: 75%;
+  position: relative;
+  width: 100%;
+}
+
+.map__iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
